@@ -9,5 +9,5 @@ def test_sum_equal_to_4():
 	assert sum == 4
 
 def test_is_active_user():
-	is_active = true
-	assert is_active == true
+	is_active = True
+	assert is_active == True
