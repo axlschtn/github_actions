@@ -1,0 +1,27 @@
+name: Kafka test app
+on: 
+  push
+jobs:
+  qa:
+    name: Check Tests Classes
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout on master
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@master
+        with:
+          python-version: "3.x"
+
+      - name: Install Pytest and Flake8 Python lib
+        run: |
+          pip3 install pytest
+          pip3 install flake8
+
+      - name: Run tests
+        run: |
+          pytest 
+    
+      - name: Run flake8
+        uses: py-action/flake8@v2
