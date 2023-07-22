@@ -10,4 +10,4 @@ def test_sum_equal_to_4():
 
 def test_is_active_user():
 	is_active = True
-	assert is_active == True
+	assert is_active is True
